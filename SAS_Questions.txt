@@ -1,0 +1,114 @@
+Question 1: You have executed following SAS DATA step as on Monday, April 01, 2000:   (1 Mark) 
+data joiners;
+set joinee;
+join_date = today();
+run;
+Which one of the following is the value of the variable JOIN_DATE in the output data set?
+1. This will be a character string with the value '04/01/2000'
+2. This will be a character string with the value 'Monday, April 01, 2000'
+3. This will be a numeric value 14701, representing the SAS date for April 01, 2000
+4. This will be a numeric value 04252000, representing the SAS date for April 01, 2000
+
+
+
+Question 2:(1 Mark)
+ 
+data sasdata.allahabad 
+sasdata.bhilai
+work.portblair
+work.pune;
+set company.prdsales;
+if region = 'NE' then output bhilai;
+if region = 'SE' then output allahabad;
+if region = 'SW' then output pune;
+if region = 'NW' then output portblair;
+run;
+Which one of the following is true regarding the output data sets?
+1. No library references are required
+2. The data sets listed on all the IF statements require a library reference
+3. The data sets listed in the last two IF statements require a library reference.
+4. The data sets listed in the first two IF statements require a library referenc
+
+
+Question 3: You have submitted the SAS DATA step as below:(2 Marks)
+
+libname temp 'SAS-data-library';
+data temp.employee;
+set sasuser.employer;
+totalsal = price * 1.04;
+run;
+
+Which one of the following statements is true regarding the program above?
+1. The program is reading from a temporary data set and writing to a temporary data set.
+2. The program is reading from a temporary data set and writing to a permanent data set.
+3. The program is reading from a permanent data set and writing to a temporary data set.
+4. The program is reading from a permanent data set and writing to a permanent data set.
+
+
+
+Question 4: Which of the following would you use to compare the result of investing 4,000INR a
+year for five years in three different banks that compound interest monthly? Assume a fixed rate for
+the five-year period.(2 Marks)
+
+1. DO WHILE statement
+2. nested DO loops
+3. DO UNTIL statement
+4. a DO group
+
+ 
+Question 5: For the program below, select an iterative DO statement to process all elements in the contrib array.(3 Marks)
+
+
+ data work.contrib;
+array contrib{4} qtr1-qtr4;
+ ...
+ contrib{i}=contrib{i}*1.25;
+ end;
+run;
+
+1. do i=4;
+2. do i=1 to 4;
+3. do until i=4;
+4. do while i le 4
+
+
+Question: 6 The following SAS program is submitted: (2 Marks)
+
+data test;
+infile `file specification';
+input name $ amount@@;
+run;
+
+Which of the following is true?
+1. Two @@ together are the same as one c
+2. Two @@ hold the data records until the bottom of the DATA step.
+3. Two @@ hold the raw data record across iterations of the DATA step.
+4. Two @@ are invalid syntax and will cause the program to fail to execute.
+
+
+Question:7 
+Write a SAS code to create a Dataset with dates from 1st January 2018- 31st January 2018.(2 Marks)
+
+Question: 8
+
+Write a SAS code to achieve the following: (3 Marks)
+ 
+if age>=0 and age<=20  then age_group='Below 20'
+if age>=13 and age<=20  then age_group='Teen Age'
+
+Question 9:
+
+What is the difference between call symput and %let ? (2 Mark)
+
+Question 10: 
+
+Write a SAS code to retrieve last observation in a dataset. (2 Mark)
+
+
+
+
+
+
+
+
+
